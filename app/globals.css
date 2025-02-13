@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.css-position {
+  background-position: 0px 28%;
+}
+
+.css-border {
+  padding-left: calc(28px + 11px);
+}
+
+.op {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 500px) {
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+  .swiper-button-prev::after {
+    font-size: 30px !important;
+  }
+}
