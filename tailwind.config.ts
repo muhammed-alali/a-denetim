@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+const config: Config = withMT({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,20 +19,20 @@ const config: Config = {
     },
     extend: {
       colors: {
-        SiteColor: "#1e73be",
-        Desc: "#5f5f5f",
-        Title: "#1b1d21",
+        SiteColor: "#1563df",
+        Title: "#161e2d",
+        Desc: "#5c6368",
       },
       filters: {
         filter:
           "brightness(100%)_contrast(100%)_saturate(0%)_blur(0px)_hue-rotate(0deg)",
       },
       boxShadow: {
-        shadow1:
-          " rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;",
+        aboutShadow: "0px 5px 25px rgba(0,0,0,0.10)",
+        solutionsShadow: "0px 30px 60px 0px rgba(0, 0, 0, 0.1019607843)",
       },
     },
   },
   plugins: [],
-};
+});
 export default config;

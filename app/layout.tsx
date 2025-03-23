@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar/navbar";
+import { Header } from "@/components/layout/Navbar/navbar";
 import Footer from "@/components/layout/Footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "A Denetim - Bağımsız Denetim",
+  title: "Home Lengo",
   icons: {
     icon: "./photo/favicon.ico",
   },
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <Header />
         {children}
         <Footer />
       </body>
